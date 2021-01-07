@@ -1,6 +1,5 @@
 import './App.css';
 import React, { useState } from 'react';
-import { unstable_renderSubtreeIntoContainer } from 'react-dom';
 
 function App() {
   // const [count, setCount ] = useState(2)
