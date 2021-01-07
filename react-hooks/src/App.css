@@ -3,7 +3,6 @@
 }
 
 .App-header {
-  font-size: 200px;
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -13,11 +12,19 @@
 }
 
 .card {
+    font-size: 100px;
     border: 1px solid #eceaea;
     border-radius: 8px;
-    height: 300px;
-    width: 300px;
+    width: 30%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+}
+
+.p-blue {
+  color: blue
+}
+
+.p-red {
+  color: red
 }
