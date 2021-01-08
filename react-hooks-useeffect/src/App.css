@@ -1,0 +1,82 @@
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.card {
+  font-size: 50px;
+  border: 1px solid #eceaea;
+  border-radius: 8px;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-red {
+  font-size: 50px;
+  border: 1px solid #eceaea;
+  border-radius: 8px;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  background-color: red;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-green {
+  font-size: 50px;
+  border: 1px solid #eceaea;
+  border-radius: 8px;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  background-color: green;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-blue {
+  font-size: 50px;
+  border: 1px solid #eceaea;
+  border-radius: 8px;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  background-color: blue;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-boxs {
+  width: 10%;
+  display: flex;
+  flex-direction: column;
+}
+
+.button-red {
+  font-size: 50px;
+  height: 100px;
+  background-color: red;
+  border-radius: 8px;
+}
+
+.button-green {
+  font-size: 50px;
+  height: 100px;
+  background-color: green;
+  border-radius: 8px;
+}
+
+.button-blue {
+  font-size: 50px;
+  height: 100px;
+  background-color: blue;
+  border-radius: 8px;
+}
