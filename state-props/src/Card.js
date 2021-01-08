@@ -6,7 +6,7 @@ class Card extends Component {
         clicked: false
     }
 
-    clickedCard = () => {
+    handleClickedCard = () => {
         this.setState(previousState => {
             return {
                 clicked: !previousState.clicked
@@ -16,7 +16,7 @@ class Card extends Component {
 
     render() {
         let frontCard = (
-            <div className='card' onClick={(this.clickedCard)}>
+            <div className='card' onClick={this.handleClickedCard}>
                 <h1>
                     Hello
                 </h1>
@@ -24,7 +24,7 @@ class Card extends Component {
         )
 
         let backCard = (
-            <div className='card' onClick={(this.clickedCard)}>
+            <div className='card' onClick={this.handleClickedCard}>
                 <h1>
                     World!
                 </h1>
