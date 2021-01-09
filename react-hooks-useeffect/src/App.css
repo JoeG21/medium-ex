@@ -55,27 +55,27 @@
 }
 
 .button-boxs {
-  width: 10%;
+  width: 15%;
   display: flex;
   flex-direction: column;
 }
 
 .button-red {
-  font-size: 50px;
+  font-size: 300%;
   height: 100px;
   background-color: red;
   border-radius: 8px;
 }
 
 .button-green {
-  font-size: 50px;
+  font-size: 300%;
   height: 100px;
   background-color: green;
   border-radius: 8px;
 }
 
 .button-blue {
-  font-size: 50px;
+  font-size: 300%;
   height: 100px;
   background-color: blue;
   border-radius: 8px;
