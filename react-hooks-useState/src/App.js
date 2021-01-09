@@ -1,41 +1,31 @@
+import { useState } from 'react';
 import './App.css';
-import React, { useState } from 'react';
 
 function App() {
-  // const [count, setCount] = useState(2)
-  // This will always run every single time you run the function. 
-  // This could slow down the performance of the application if it's something complex like Fibonacci
-
-
-  const [count, setCount] = useState(() => {
-    return 2
-  })
-  // Using the functional version of useState will only run once whenever your component
-  // Renders the very 1st time
-
-
-  const [name, setName] = useState(() => {
-    return <div className='p-red'> Red </div>
-  })
-
-  const decrementCount = () => {
-    setCount(prevCount => prevCount - 1)
-    setName(prevName => <div className='p-red'> Red </div>)
+  const [color, setColor] = useState('?')
+ 
+  const handleRed = () => {
+    setColor(prevColor => <div className='card-red'> Red </div>)
   }
 
-  const incrementCount = () => {
-    setCount(prevCount => prevCount + 1)
-    setName(prevName => <div className='p-blue'> Blue </div>)
+  const handleGreen = () => {
+    setColor(prevColor => <div className='card-green'> Green </div>)
+  }
+
+  const handleBlue = () => {
+    setColor(prevColor => <div className='card-blue'> Blue </div>)
   }
 
   return (
-    <div className='App-header'>
-      <div className='card'>
-        <button onClick={decrementCount}> ➖  </button>
-        <span> {count} </span>
-        <p> {name} </p>
-        <button onClick={incrementCount}> ➕  </button>
-      </div>
+    <div className="App-header">
+        <div className='button-boxs'>
+          <button className='button-red' onClick={handleRed}> Red </button>
+          <button className='button-green' onClick={handleGreen}> Greeen </button>
+          <button className='button-blue' onClick={handleBlue}> Blue </button>
+        </div>
+        <div className='card'>
+          <span> {color} </span>
+        </div>
     </div>
   );
 }
