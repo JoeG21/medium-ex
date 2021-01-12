@@ -10,21 +10,3 @@
   justify-content: center;
   color: white;
 }
-
-.card {
-    font-size: 100px;
-    border: 1px solid #eceaea;
-    border-radius: 8px;
-    width: 30%;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-.p-blue {
-  color: blue
-}
-
-.p-red {
-  color: red
-}

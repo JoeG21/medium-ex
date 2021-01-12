@@ -2,43 +2,23 @@ import './App.css';
 import React, { useState, version } from 'react';
 
 function App() {
-  const [count, setCount] = useState(2, console.log('more than 1'))
-  // Hardcoded Version ⬆️
-  // This will always run every single time you run the function. 
-  // This could slow down the performance of the application if it's something complex like Fibonacci
+  const [resource, setResource] = useState('posts')
 
+  // useEffect(() => {
+  //   console.log('yo')
+  // }, [])
+  // Everything inside this arrow function ⬆️ is going to be
+  // executed every single time our application renders
 
-  // const [count, setCount] = useState(() => {
-  //   console.log('only 1')
-  //   return 2
-  // })
-  // Function Version ⬆️
-  // This runs the function only the very first time your component renders
-  // Using the functional version of useState will only run the function one time 
-  // When your component renders.
-
-
-  const [name, setName] = useState(() => {
-    return <div className='p-red'> Red </div>
-  })
-
-  const decrementCount = () => {
-    setCount(prevCount => prevCount - 1)
-    setName(prevName => <div className='p-red'> Red </div>)
-  }
-
-  const incrementCount = () => {
-    setCount(prevCount => prevCount + 1)
-    setName(prevName => <div className='p-blue'> Blue </div>)
-  }
-
+  // The 2nd parameters is an array and anything you pass into the array
+  // Is going to be vaules that whenever you change your hooks is going to run
+  // It doesn't run when the array's vaules doesn't change
   return (
     <div className='App-header'>
-      <div className='card'>
-        <button onClick={decrementCount}> ➖  </button>
-        <span> {count} </span>
-        <span> {name} </span>
-        <button onClick={incrementCount}> ➕  </button>
+      <div>
+        <button onClick={() => setResource('post')}> Posts </button>
+        <button onClick={() => setResource('users')}> Users </button>
+        <button onClick={() => setResource('comments')}> Comments </button>
       </div>
     </div>
   );
