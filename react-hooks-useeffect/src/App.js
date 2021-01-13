@@ -1,26 +1,29 @@
 import './App.css';
-import React, { useState, version } from 'react';
+import React, { useState, useEffect } from 'react';
 
 function App() {
   const [resource, setResource] = useState('posts')
 
+  useEffect(() => {
+    console.log('onMount')
+  }, [])
+  // This acts like an onMount
+
   // useEffect(() => {
-  //   console.log('yo')
-  // }, [])
+  //   console.log('hello')
+  // }, [resource])
   // Everything inside this arrow function ⬆️ is going to be
   // executed every single time our application renders
 
   // The 2nd parameters is an array and anything you pass into the array
-  // Is going to be vaules that whenever you change your hooks is going to run
-  // It doesn't run when the array's vaules doesn't change
+ 
   return (
-    <div className='App-header'>
-      <div>
-        <button onClick={() => setResource('post')}> Posts </button>
+      <div className='App'>
+        <button onClick={() => setResource('posts')}> Posts </button>
         <button onClick={() => setResource('users')}> Users </button>
         <button onClick={() => setResource('comments')}> Comments </button>
+        <h1> {resource} </h1>
       </div>
-    </div>
   );
 }
 
