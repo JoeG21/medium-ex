@@ -1,21 +1,30 @@
 import './App.css';
 import React, { useState, useEffect } from 'react';
 
-function App() {
+const App = () => {
   const [resource, setResource] = useState('posts')
+  const [list, setList] = useState([])
 
-  useEffect(() => {
-    console.log('onMount')
-  }, [])
+  // console.log('render')
+
+  // useEffect(() => {
+  //   console.log('hello')
+  // })
+
+  //   useEffect(() => {
+  //   console.log('onMount')
+  // }, [])
   // This acts like an onMount
 
   // useEffect(() => {
   //   console.log('hello')
   // }, [resource])
-  // Everything inside this arrow function ⬆️ is going to be
-  // executed every single time our application renders
 
-  // The 2nd parameters is an array and anything you pass into the array
+  useEffect(() => {
+  fetch(`https://jsonplaceholder.typicode.com/${resource}`)
+  .then(response => response.json())
+  .then(json => setList(json));
+  }, [resource])
  
   return (
       <div className='App'>
@@ -23,8 +32,11 @@ function App() {
         <button onClick={() => setResource('users')}> Users </button>
         <button onClick={() => setResource('comments')}> Comments </button>
         <h1> {resource} </h1>
+        {list.map(data => {
+          return <ul>{JSON.stringify(data)}</ul>
+        })}
       </div>
-  );
+  ); 
 }
 
 export default App;
