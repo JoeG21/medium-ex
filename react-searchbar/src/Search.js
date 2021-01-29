@@ -1,13 +1,13 @@
 import React from 'react'
 
-const Search = () => {
+const Search = (props) => {
     return (
         <div>
             <input
                 onChange={e => props.handleSearch(e)}
                 id="search-bar"
                 type="text"
-                placeholder="Search Notes"
+                placeholder="Search"
             />
         </div>
     )
