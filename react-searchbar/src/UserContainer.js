@@ -1,7 +1,7 @@
 import React from 'react'
 import UserCard from './UserCard'
 
-const MainContainer = (props) => {
+const UserContainer = (props) => {
     return (
         <div>
             {props.users.map (user => <UserCard key={user.id} user={user} />)}
@@ -9,4 +9,4 @@ const MainContainer = (props) => {
     )
 }
 
-export default MainContainer
+export default UserContainer
