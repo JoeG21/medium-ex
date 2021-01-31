@@ -15,61 +15,21 @@ const App = () => {
     .then(json => setUsers(json));
   }, [])
 
+  useEffect(() => {
+    setFoundUsers(
+      users.filter( user => {
+        return user.name.toLowerCase().includes(searchTerm.toLowerCase())}
+    ))
+  }, [searchTerm, users])
+
   const searchUser = (e) => {
-    // setSearchTerm(prevState => e.target.value), filterUser
     setSearchTerm(prevState => e.target.value)
-
-    if (searchTerm !== "") {
-      const x = users.filter(user => {
-        return user.name.toLowerCase().includes(searchTerm.toLocaleLowerCase())
-      })
-      return setFoundUsers(x)
-    } else {
-      setFoundUsers([])
-    }
-
-    //  if (searchTerm !== "") {
-    //   let currentUser = users.filter(user => {
-    //     return user.name.toLowerCase().includes(searchTerm.toLowerCase())
-    //   })
-    //   setFoundUsers(currentUser)
-    //   // setFoundUsers(prevState => currentUser)
-    // } else {
-    //   setFoundUsers([])
-    // }
-    
-
-    // setSearchTerm(prevState => console.log(e.target.value))
-
   };
-
-  // const filterUser = () => {
-  //   users.filter( user => {
-  //     return user.name.includes(searchTerm)
-  //   })
-  // }
-
-
-  // const filterUser = () => {
-  //   if (searchTerm !== "") {
-  //     let currentUser = users.filter(user => {
-  //       return user.name.includes(searchTerm)
-  //     })
-  //     setFoundUsers(prevState => currentUser)
-  //   } else {
-  //     setFoundUsers([])
-  //   }
-  // }
 
   return (
     <div className="App">
       <Search searchUser={searchUser} />
       <br />
-
-      {/* {searchTerm === "" ? <UserContainer users={users} /> : <UserContainer foundUsers={foundUsers} />} */}
-
-
-
       {foundUsers.length === 0 ? 
         <UserContainer users={users} /> 
         : 
