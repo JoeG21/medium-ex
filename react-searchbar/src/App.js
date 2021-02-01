@@ -21,26 +21,12 @@ const App = () => {
     // setSearchTerm(prevState => console.log(e.target.value))
   };
 
-  // // WORKING CODE ⬇️
   useEffect(() => {
     setFoundUsers(
       users.filter( user => {
         return user.name.toLowerCase().includes(searchTerm.toLowerCase())}
     ))
   }, [searchTerm, users])
-
-  // useEffect(() => {
-  //   setFoundUsers(
-  //     let current = users.filter(user => {
-  //       user.name.toLowerCase().includes(searchTerm.toLowerCase())
-  //       if( current !== users) {
-  //         console.log("hello")
-  //       } else {
-  //         return foundUsers(current)
-  //       }
-  //     }
-  //     ))
-  // }, [searchTerm, users])
 
   return (
     <div className="App">
@@ -49,15 +35,9 @@ const App = () => {
       {foundUsers.length !== 0 ?
       <UserContainer users={foundUsers} />
       : foundUsers.length === 0 ?
-      <h1>No</h1>
-      // <UserContainer users={} />
+      <h1> No Result </h1>
       :
       <UserContainer users={users} />}
-
-      {/* {foundUsers.length === 0 ?
-        <UserContainer users={users} />
-        :
-        <UserContainer users={foundUsers} />} */}
     </div>
   );
 }
