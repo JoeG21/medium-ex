@@ -1,0 +1,34 @@
+.App {
+  color: white;
+  height: 100vh;
+  width: 100vw;
+  font-size: 10vw;
+  background-color: #282c34;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.portrait {
+  color: red;
+}
+
+.landscape {
+  color: blue;
+}
+
+
+
+
+
+/* @media (orientation: portrait) and (max-height: 400px) {
+  .App {
+    color: red;
+  }
+}
+
+@media (orientation: landscape), (max-width: 200px) {
+  .App {
+    color: blue;
+  }
+} */

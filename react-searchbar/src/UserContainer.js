@@ -6,7 +6,7 @@ const UserContainer = (props) => {
         <div>
             {props.users.map (user => <UserCard key={user.id} user={user} />)}
         </div>
-    )
-}
+    );
+};
 
 export default UserContainer
