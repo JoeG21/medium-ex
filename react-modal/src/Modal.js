@@ -1,7 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-
 const Modal = (props) => {
     if (!props.open) return null
 
