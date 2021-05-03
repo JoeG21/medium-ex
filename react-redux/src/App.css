@@ -1,0 +1,28 @@
+.App {
+  background-color: #282c34;
+  color: white;
+  height: 50vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Header {
+  background-color: rgb(133, 133, 133);
+  height: 50vh;
+  font-size: 10vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+span {
+  padding: 2vw;
+  font-size: 10vw;
+}
+
+button {
+  font-size: 5vw;
+  border-radius: 8px;
+}
